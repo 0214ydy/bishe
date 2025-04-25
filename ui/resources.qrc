@@ -1,0 +1,7 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+    <qresource prefix="/icons">
+        <!-- 这里可以添加图标资源 -->
+        <!-- 例如: <file>icons/open.png</file> -->
+    </qresource>
+</RCC>
