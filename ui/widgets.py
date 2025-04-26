@@ -296,3 +296,16 @@ class MetricsChart(QWidget):
             bool: 如果图表包含数据返回True，否则返回False
         """
         return len(self.x_data) > 0 and len(self.y_data) > 0
+
+    def export_to_csv(self, file_path):
+        """导出数据到CSV文件"""
+        import csv
+        with open(file_path, 'w', newline='') as csvfile:
+            writer = csv.writer(csvfile)
+            writer.writerow(['X轴数据', 'Y轴数据'])
+            for x, y in zip(self.x_data, self.y_data):
+                writer.writerow([x, y])
+
+    def export_to_image(self, file_path):
+            """导出图表为图像文件"""
+            self.figure.savefig(file_path)
